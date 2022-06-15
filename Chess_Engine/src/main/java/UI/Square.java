@@ -5,26 +5,38 @@ import Pieces.*;
 import javax.swing.*;
 import java.awt.*;
 
-public class Square extends JComponent {
+public class Square extends JComponent implements Cloneable {
     private int xS;
     private int yS;
     public static final int HEIGHT_OF_SQUARE = 64;
     public static final int WIGHT_OF_SQUARE = 64;
+    private Color resertColor;
     private Piece pieceOccupy;
     private Color squareColor;
 
     public Square(){}
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        Square cloner = (Square) super.clone();
+        return cloner;
+    }
 
     public Square(int x, int y, Piece piece, Color color){
         this.xS = x;
         this.yS = y;
         this.pieceOccupy = piece;
         this.squareColor = color;
+        this.resertColor = color;
 
         this.setBorder(BorderFactory.createEmptyBorder());
     }
 
-    @Override
+    public Square(int x, int y){
+        this.xS = x;
+        this.yS = y;
+    }
+
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(squareColor);
@@ -72,4 +84,9 @@ public class Square extends JComponent {
         }
         return true;
     }
+
+    public Color getResertColor(){
+        return resertColor;
+    }
+
 }

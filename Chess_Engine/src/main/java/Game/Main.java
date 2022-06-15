@@ -30,7 +30,7 @@ public class Main extends javax.swing.JFrame {
         signDg.setSize(signDg.getPreferredSize());
         signDg.setLocationRelativeTo(null);
         PlayMusic("../Chess_Engine/src/main/java/Music/bg2.wav");
-        setResizable(false);
+        setResizable(true);
     }
 
     /**

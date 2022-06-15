@@ -53,6 +53,10 @@ public abstract class Piece extends JPanel {
         this.chess_image = chess_image;
     }
 
+    public int getValues(){
+        return values;
+    }
+
     @Override
     public String getName() {
         return name;
@@ -61,6 +65,14 @@ public abstract class Piece extends JPanel {
     @Override
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setWhite(boolean white) {
+        isWhite = white;
+    }
+
+    public void setValues(int values) {
+        this.values = values;
     }
 
     public Piece(int x, int y, boolean iswhite, Image image, String name){
@@ -80,8 +92,13 @@ public abstract class Piece extends JPanel {
         g.drawImage(chessImage_wking, this.getX() * Square.WIGHT_OF_SQUARE + xP, this.getY() * Square.HEIGHT_OF_SQUARE + yP , CHESS_WIGHT, CHESS_WIGHT, this);
     }
 
-    public void calculateLegalMove(Square[][] boardState){
+    public void calculateLegalMove(Square[][] boardState){}
 
+    public boolean isSafe(Square[][] boardState, Square location){
+        return false;
     }
 
+    public boolean isWhite() {
+        return isWhite;
+    }
 }
