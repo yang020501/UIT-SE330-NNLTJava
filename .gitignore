@@ -71,7 +71,7 @@ build/
 **/*.jar
 
 # Maven specific
-.wav
+
 
 target/
 
