@@ -31,12 +31,6 @@ target/
 /out/*.*
 
 
-# Eclipse
-# -------
-*.classpath
-*.project
-*.settings
-
 /bin
 .metadata/
 bin/
@@ -77,6 +71,7 @@ build/
 **/*.jar
 
 # Maven specific
+.wav
 
 target/
 
