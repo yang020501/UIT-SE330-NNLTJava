@@ -4,6 +4,7 @@
   - IDE: ` NetBeans` [Link](https://netbeans.apache.org/download/index.html)
   - Thiết lập môi trường `Java`(các bản mới thường sẽ tự đồng thiết lập môi trường): [Download JDK](https://www.oracle.com/java/technologies/downloads/) 
   - Hoặc bạn có thể xem hướng dẫn tại đây nếu như phần cài trên chưa thiết lập môi trường cho bạn: [Xem hướng dẫn](https://openplanning.net/10377/cai-dat-java-tren-windows)
+  - Tải file nhạc và bỏ vào theo đường dẫn src/main/java/Music do file nhạc > 100mb nên không up Git được [Link](https://drive.google.com/drive/folders/1lKglUg3dL7QdSShwzg_Hn-mGUtqTXjNd?usp=sharing)
 ## Sau khi cài hoàn tất bạn có thể mở Project bằng NetBean nhưng vẫn cần thiết lập bước cài Database và liên kết Server cho NetBeans:
   - `Sql server` : [Hướng dẫn cái Sql Server](https://datapot.vn/huong-dan-cai-dat-sql-server-2019/)
   - Học và cách tạo database trong SQl server : [Link](https://openplanning.net/10991/sql-server)
