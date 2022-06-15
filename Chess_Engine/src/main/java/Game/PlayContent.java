@@ -15,12 +15,19 @@ public class PlayContent extends javax.swing.JPanel {
     /**
      * Creates new form PlayContent
      */
+    private static Board chess_board;
+
     public PlayContent() {
         initComponents();
-        // add chesboard gmae for play component
-        Board chess_board = new Board();
-        chess_board.boardSetup();
+        chess_board = new Board();
+         chess_board.boardSetup();
         add(chess_board, java.awt.BorderLayout.CENTER);
+    }
+
+    public void New() {
+        // add chesboard gmae for play component
+
+       
 
     }
 
@@ -64,7 +71,7 @@ public class PlayContent extends javax.swing.JPanel {
         add(jPanel1, java.awt.BorderLayout.LINE_START);
     }// </editor-fold>//GEN-END:initComponents
    //get Main Frame
-   
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton backbtn;
     public javax.swing.JPanel jPanel1;
