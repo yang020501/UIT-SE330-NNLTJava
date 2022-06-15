@@ -20,8 +20,8 @@ public class Menu extends javax.swing.JPanel {
      */
     public Menu() {
         initComponents();
-        Icon bg = new ImageIcon("../Chess_Engine/Resources/bg.jpg");
-        jLabel1.setIcon(bg);
+        /*Icon bg = new ImageIcon("../Chess_Engine/Resources/bg.jpg");
+        jLabel1.setIcon(bg);*/
 
     }
 
@@ -73,14 +73,15 @@ public class Menu extends javax.swing.JPanel {
     // update Menu by player
 
     public void Update(Player s) {
+        System.out.println(s.toString());
         String tmp = s.getTheme();
-        if (tmp == "fall") {
+        if ("fall".equals(tmp)) {
             Icon bg = new ImageIcon("../Chess_Engine/Resources/bg.jpg");
             jLabel1.setIcon(bg);
-        } else if (tmp == "sky") {
+        } else if ("sky".equals(tmp)) {
             Icon bg = new ImageIcon("../Chess_Engine/Resources/bg2.jpg");
             jLabel1.setIcon(bg);
-        } else if (tmp == "hell") {
+        } else if ("hell".equals(tmp)) {
             Icon bg = new ImageIcon("../Chess_Engine/Resources/bg3.jpg");
             jLabel1.setIcon(bg);
         }

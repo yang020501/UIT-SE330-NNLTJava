@@ -146,11 +146,11 @@ public class Game {
         } else {
             if (cn.getUserVerify(usr, password)) {
                 main.loginDg.dispose();
+                menu.Update(cn.getUser(usr));
                 main.getContentPane().add(menu);
                 main.setSize(Utility.menuSize.getSize());
                 main.setLocationRelativeTo(null);
                 Main.pl = cn.getUser(usr);
-                menu.Update(main.pl);
                 main.UpdateUI();
                 main.setVisible(true);
 
@@ -228,10 +228,12 @@ public class Game {
         /*
         set up for playcontent
          */
-        pl = new PlayContent();
+        pl = new PlayContent(main.pl);
         pl.backbtn.addActionListener((evt) -> {
             playBack(evt);
         });
+        //
+
         // set ccontent for Frame
         main.setSize(Utility.playSize.getSize());
         main.remove(menu);
