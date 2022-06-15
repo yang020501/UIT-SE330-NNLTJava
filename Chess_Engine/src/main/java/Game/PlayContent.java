@@ -4,6 +4,7 @@
  */
 package Game;
 
+import Model.Player;
 import UI.Board;
 
 /**
@@ -21,6 +22,14 @@ public class PlayContent extends javax.swing.JPanel {
         initComponents();
         chess_board = new Board();
         chess_board.boardSetup();
+        add(chess_board, java.awt.BorderLayout.CENTER);
+    }
+
+    public PlayContent(Player s) {
+        initComponents();
+        chess_board = new Board();
+        chess_board.boardSetup();
+        Board.choise = s.getTheme();
         add(chess_board, java.awt.BorderLayout.CENTER);
     }
 
