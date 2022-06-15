@@ -8,7 +8,7 @@
 ## Sau khi cài hoàn tất bạn có thể mở Project bằng NetBean nhưng vẫn cần thiết lập bước cài Database và liên kết Server cho NetBeans:
   - `Sql server` : [Hướng dẫn cái Sql Server](https://datapot.vn/huong-dan-cai-dat-sql-server-2019/)
   - Học và cách tạo database trong SQl server : [Link](https://openplanning.net/10991/sql-server)
-  - Bạn có thể tạo nhanh theo file Script của project trong Respo
+  - Bạn có thể tạo nhanh theo file SDB.sql của project trong file Chess_Engine
   - Download Driver phù hợp với JDK version bạn chọn trên trong file Zip sau khi bạn tải về với đuôi .jre*.jar *=version Java JDK bạn chọn hoặc nhỏ hơn
  [Link](https://docs.microsoft.com/vi-vn/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-2017)
   - ### Liên kết với JDBC trogn NetBeans:
