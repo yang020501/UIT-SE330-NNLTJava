@@ -13,7 +13,7 @@ import java.awt.Dimension;
 public class Utility {
 
     public static final Dimension menuSize = new Dimension(610, 410);
-    public static final Dimension playSize = new Dimension(650, 550);
+    public static final Dimension playSize = new Dimension(638, 550);
     public static final Dimension boardSize = new Dimension(525, 550);
     public static final Dimension settingSize = new Dimension(457, 289);
 

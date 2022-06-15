@@ -15,16 +15,16 @@ import javax.swing.event.ChangeEvent;
  * @author Asus
  */
 public class Game {
-    
+
     private static Main main;
     private Menu menu;
     private Setting st;
     private PlayContent pl;
-    
+
     public Game() {
         initComponents();
     }
-    
+
     private void initComponents() {
         /*
         set up for main
@@ -36,14 +36,14 @@ public class Game {
             public void keyPressed(KeyEvent evt) {
                 loginKeyPressed(evt);
             }
-            
+
         });
         main.passTxt.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent evt) {
                 loginKeyPressed(evt);
             }
-            
+
         });
         // add login event
         main.loginBtn.addActionListener(new ActionListener() {
@@ -101,7 +101,7 @@ public class Game {
         st.backBtn.addActionListener((ActionEvent e) -> {
             settingBack(e);
         });
-        
+
         st.soundTBtn.addItemListener((ItemEvent e) -> {
             settingSoundTBtn(e);
         });
@@ -111,16 +111,9 @@ public class Game {
         st.saveBtn.addActionListener((e) -> {
             settingSave(e);
         });
-        /*
-        set up for playcontent
-         */
-        pl = new PlayContent();
-        pl.backbtn.addActionListener((e) -> {
-            playBack(e);
-        });
-        
+
     }
-    
+
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
@@ -137,7 +130,7 @@ public class Game {
     private void loginBtnActionPerformed(ActionEvent evt) {
         login();
     }
-    
+
     private void login() {
         // set Connection
         DBconnection cn = new DBconnection();
@@ -152,7 +145,7 @@ public class Game {
             JOptionPane.showMessageDialog(null, "No Account!");
         } else {
             if (cn.getUserVerify(usr, password)) {
-                main.loginDg.dispose();                
+                main.loginDg.dispose();
                 main.getContentPane().add(menu);
                 main.setSize(Utility.menuSize.getSize());
                 main.setLocationRelativeTo(null);
@@ -160,9 +153,9 @@ public class Game {
                 menu.Update(main.pl);
                 main.UpdateUI();
                 main.setVisible(true);
-                
+
                 cn.close();
-                
+
             } else {
                 JOptionPane.showMessageDialog(null, "Incorrect Password");
             }
@@ -173,7 +166,7 @@ public class Game {
     private void signSBtnActionPerformed(ActionEvent evt) {
         sign();
     }
-    
+
     private void sign() {
         // set Connection
         DBconnection cn = new DBconnection();
@@ -206,7 +199,7 @@ public class Game {
             login();
         }
     }
-    
+
     private void signKeyPressed(KeyEvent evt) {
         if (evt.getKeyCode() == 10) {
             sign();
@@ -223,16 +216,22 @@ public class Game {
 
     // setting btn
     private void menuSetting(ActionEvent e) {
-        st.Update(main.pl);
+        st.Update(Main.pl);
         main.setSize(Utility.settingSize.getSize());
         main.remove(menu);
         main.add(st);
         main.setLocationRelativeTo(null);
         main.validate();
     }
-    
-    private void menuNew(ActionEvent e) {
 
+    private void menuNew(ActionEvent e) {
+        /*
+        set up for playcontent
+         */
+        pl = new PlayContent();
+        pl.backbtn.addActionListener((evt) -> {
+            playBack(evt);
+        });
         // set ccontent for Frame
         main.setSize(Utility.playSize.getSize());
         main.remove(menu);
@@ -246,7 +245,7 @@ public class Game {
      */
     // back btn 
     private void settingBack(ActionEvent e) {
-        
+
         main.setSize(Utility.menuSize.getSize());
         menu.Update(main.pl);
         main.remove(st);
@@ -258,7 +257,7 @@ public class Game {
     //sound slider
     private void settingSoundSlider(ChangeEvent e) {
         st.Update();
-        
+
     }
 
     //sound tbtn
@@ -269,7 +268,7 @@ public class Game {
         } else {
             st.soundTBtn.setText("Off");
             st.Update();
-            
+
         }
     }
 
@@ -290,7 +289,7 @@ public class Game {
             JOptionPane.showMessageDialog(null, "Save Fail!");
         }
         cn.close();
-        
+
     }
 
     /*
