@@ -66,11 +66,11 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     public static final Image Black_Pawn = new ImageIcon("../Chess_Engine/Resources/bpawn.png").getImage();
 
     public void boardSetup(){
-        if(choise == "sky"){
+        if("sky".equals(choise)){
             black_sq_color = darkblueColor;
             white_sq_color = brightblueColor;
         }
-        else if(choise == "hell"){
+        else if("hell".equals(choise)){
             black_sq_color = redColor;
             white_sq_color = orangeColor;
         }

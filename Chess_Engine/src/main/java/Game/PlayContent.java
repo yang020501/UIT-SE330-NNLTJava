@@ -28,8 +28,8 @@ public class PlayContent extends javax.swing.JPanel {
     public PlayContent(Player s) {
         initComponents();
         chess_board = new Board();
-        chess_board.boardSetup();
         Board.choise = s.getTheme();
+        chess_board.boardSetup();
         add(chess_board, java.awt.BorderLayout.CENTER);
     }
 
