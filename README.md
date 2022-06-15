@@ -6,7 +6,7 @@
   - Hoặc bạn có thể xem hướng dẫn tại đây nếu như phần cài trên chưa thiết lập môi trường cho bạn: [Xem hướng dẫn](https://openplanning.net/10377/cai-dat-java-tren-windows)
   - Tải file nhạc và bỏ vào theo đường dẫn src/main/java/Music do file nhạc > 100mb nên không up Git được [Link](https://drive.google.com/drive/folders/1lKglUg3dL7QdSShwzg_Hn-mGUtqTXjNd?usp=sharing)
 ## Sau khi cài hoàn tất bạn có thể mở Project bằng NetBean nhưng vẫn cần thiết lập bước cài Database và liên kết Server cho NetBeans:
-  - `Sql server` : [Hướng dẫn cái Sql Server](https://datapot.vn/huong-dan-cai-dat-sql-server-2019/)
+  - `Sql server` : [Hướng dẫn cài Sql Server](https://datapot.vn/huong-dan-cai-dat-sql-server-2019/)
   - Học và cách tạo database trong SQl server : [Link](https://openplanning.net/10991/sql-server)
   - Bạn có thể tạo nhanh theo file SDB.sql của project trong file Chess_Engine
   - Download Driver phù hợp với JDK version bạn chọn trên trong file Zip sau khi bạn tải về với đuôi .jre*.jar *=version Java JDK bạn chọn hoặc nhỏ hơn
@@ -27,18 +27,18 @@
   4. Click ok và open 
   ![image](https://user-images.githubusercontent.com/79902770/173604091-57440334-9304-4776-98da-22facdb8dfa4.png)
   
-  5. Chọn 1 trong các bản bạn đã add nếu bạn add nhiều bản jdbc và 
+  5. Chọn 1 trong các bản bạn đã add nếu bạn add nhiều bản jdbc
   ![image](https://user-images.githubusercontent.com/79902770/173604236-6024b931-edc0-45ec-aa9e-5a89cd4a1ec1.png)
   
   6. Thiết lập các thuộc tính 
    Trong đó: 
    - host: tên host của máy bạn
-   - port: mặc đinh sẽ là 1433 nhưng bạn có thể xem port cảu bạn tại dây [Hướng dẫn xem port](https://chuyengiamarketing.com/cach-thiet-lap-sql-server-ket-noi-tu-xa-qua-mang/)
+   - port: mặc đinh sẽ là 1433 nhưng bạn có thể xem port của bạn tại dây [Hướng dẫn xem port](https://chuyengiamarketing.com/cach-thiet-lap-sql-server-ket-noi-tu-xa-qua-mang/)
    - Database name: ứng với Database name trong Sql server bạn đã tạo
    - Instance name:  để trống hoặc tùy chỉnh
    - Username: 
    - Password:  
-   ### Đây là 2 field bắt  bạn cần mở chức năng dăng nhập để kết nối Sql Server  mặc định project sẽ là sa và sa class DBconnnection
+   ### Đây là 2 field bắt  bạn cần mở chức năng dăng nhập để kết nối Sql Server  mặc định project sẽ là sa và sa trong class DBconnnection
    ### Hoặc bạn có thể mở qua [Xác thực Sql](https://www.engisv.info/?p=4982)
    ### Trong field Database Connection "jdbc=........" thêm `encrypt=false;`  vào đuôi chuỗi này để tránh lỗi 
   ![image](https://user-images.githubusercontent.com/79902770/173604580-aa7cfe90-1f76-4b55-a61b-f09d5ccffd44.png)
