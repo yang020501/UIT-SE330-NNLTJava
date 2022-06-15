@@ -66,6 +66,7 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     public static final Image Black_Pawn = new ImageIcon("../Chess_Engine/Resources/bpawn.png").getImage();
 
     public void boardSetup(){
+        gameOver = false;
         if("sky".equals(choise)){
             black_sq_color = darkblueColor;
             white_sq_color = brightblueColor;
@@ -344,14 +345,18 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
         checker.setBoard(boardState);
 
         if(checker.CheckWinning()){
+            String message ="";
             if(checker.isWhiteWin()){
-                System.out.println("White win the game");
+                message = "White win the game";
             }
             else if(checker.isBlackWin()){
-                System.out.println("Black win the game");
+                message = "Black win the game";
             }
-
+            
+            JOptionPane.showMessageDialog(null, message);
             gameOver = true;
+            boardSetup();
+            
         }
 
         repaint();
