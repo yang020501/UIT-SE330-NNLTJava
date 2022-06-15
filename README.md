@@ -46,7 +46,7 @@
   7. Sau khi next bạn sẽ chọn định dạng bảng mà bạn dùng trong sql của mình là dbo
   ![image](https://user-images.githubusercontent.com/79902770/173606706-4de87a58-006d-46f1-8a38-0ba98a9c97b9.png)
   
-  8. Chọn tên trong phần thể hiện database trong scroll pane ở hình 1
+  8. Chọn tên trong phần thể hiện database trong scroll pane bên trái như hình
   
   ![image](https://user-images.githubusercontent.com/79902770/173606860-3e894495-7708-41bd-bbc1-7cfecd76b309.png) 
   
