@@ -20,15 +20,8 @@ public class PlayContent extends javax.swing.JPanel {
     public PlayContent() {
         initComponents();
         chess_board = new Board();
-         chess_board.boardSetup();
+        chess_board.boardSetup();
         add(chess_board, java.awt.BorderLayout.CENTER);
-    }
-
-    public void New() {
-        // add chesboard gmae for play component
-
-       
-
     }
 
     /**
